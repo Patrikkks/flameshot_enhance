@@ -1,7 +1,7 @@
 <div align="center">
   <p>
     <h1>
-      <a href="https://github.com/flameshot-org/flameshot">
+      <a href="[https://github.com/flameshot-org/flameshot](https://github.com/Patrikkks/flameshot_enhance)">
         <img src="data/img/app/org.flameshot.Flameshot.svg" alt="Flameshot" />
       </a>
       <br />
