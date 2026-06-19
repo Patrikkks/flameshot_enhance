@@ -54,7 +54,7 @@
 
 ## Index
 
-- [The New Flameshot Enhance Features](#newfeatures)
+- [The New Flameshot Enhance Features](#the-new-flameshot-enhance-features)
 - [Features](#features)
 - [Usage](#usage)
   - [Usage on Windows](#usage-on-windows)
