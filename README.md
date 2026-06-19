@@ -1,12 +1,12 @@
 <div align="center">
-  <p>
-    <h1>
-      <a href="https://github.com/Patrikkks/flameshot_enhance">
-        <img src="data/img/app/org.flameshot.Flameshot.svg" alt="Flameshot" />
-     </a>
+<p>
+<h1>
+<a href="https://github.com/Patrikkks/flameshot_enhance">
+<img src="data/img/app/org.flameshot.Flameshot.svg" alt="Flameshot" />
+</a>
 <br/>Flameshot Enhance
 </h1>
-<h4>Powerful yet simple to use screenshot software.</h4>
+<h4>Functionality-enriching fork of Flameshot, the Powerful yet simple to use screenshot software.</h4>
 </p>
 <p>
     <a href="https://github.com/flameshot-org/flameshot/actions?query=workflow%3APackaging%28Linux%29">
