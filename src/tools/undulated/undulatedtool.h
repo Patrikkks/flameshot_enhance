@@ -1,4 +1,4 @@
-// ondulatedtool.h
+// undulatedtool.h
 // SPDX-License-Identifier: GPL-3.0-or-later
 #pragma once
 
@@ -9,11 +9,11 @@
 #include <QPointF>
 #include <QPainterPath>
 
-class OndulatedTool : public AbstractTwoPointTool {
+class UndulatedTool : public AbstractTwoPointTool {
     Q_OBJECT
 public:
-    explicit OndulatedTool(QObject* parent = nullptr);
-    ~OndulatedTool() override;
+    explicit UndulatedTool(QObject* parent = nullptr);
+    ~UndulatedTool() override;
 
     QIcon icon(const QColor& background, bool inEditor) const override;
     QString name() const override;
@@ -28,8 +28,8 @@ public:
     void process(QPainter& painter, const QPixmap& pixmap) override;
 
 private:
-    QVector<QPointF> generateOndulated(const QPointF& start, const QPointF& end, double wavelength, double amplitude);
-    QVector<QPointF> generateOndulatedBalanced(const QPointF& start, const QPointF& end, double wavelength, double amplitude);
+    QVector<QPointF> generateUndulated(const QPointF& start, const QPointF& end, double wavelength, double amplitude);
+    QVector<QPointF> generateUndulatedBalanced(const QPointF& start, const QPointF& end, double wavelength, double amplitude);
     QPainterPath pathFromPoints(const QVector<QPointF>& pts);
 
     double m_userWavelength;

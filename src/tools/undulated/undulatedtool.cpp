@@ -1,6 +1,6 @@
-// ondulatedtool.cpp
+// undulatedtool.cpp
 // SPDX-License-Identifier: GPL-3.0-or-later
-#include "ondulatedtool.h"
+#include "undulatedtool.h"
 #include <QPainter>
 #include <QDebug>
 #include <QGuiApplication>
@@ -11,7 +11,7 @@
 constexpr double M_PI = 3.14159265358979323846;
 #endif
 
-OndulatedTool::OndulatedTool(QObject* parent)
+UndulatedTool::UndulatedTool(QObject* parent)
     : AbstractTwoPointTool(parent),
       m_userWavelength(16.0),
       m_wavelength(16.0),
@@ -34,20 +34,20 @@ OndulatedTool::OndulatedTool(QObject* parent)
     setModifierInvertsConstraint(true);
 }
 
-OndulatedTool::~OndulatedTool() = default;
+UndulatedTool::~UndulatedTool() = default;
 
-QIcon OndulatedTool::icon(const QColor& background, bool /*inEditor*/) const
+QIcon UndulatedTool::icon(const QColor& background, bool /*inEditor*/) const
 {
-    return QIcon(iconPath(background) + "ondulated-outline.svg");
+    return QIcon(iconPath(background) + "undulated-outline.svg");
 }
 
-QString OndulatedTool::name() const { return tr("Ondulated"); }
-QString OndulatedTool::description() const { return tr("Set the Ondulated line as the paint tool"); }
-CaptureTool::Type OndulatedTool::type() const { return CaptureTool::TYPE_ONDULATED; }
+QString UndulatedTool::name() const { return tr("Undulated"); }
+QString UndulatedTool::description() const { return tr("Set the Undulated line as the paint tool"); }
+CaptureTool::Type UndulatedTool::type() const { return CaptureTool::TYPE_UNDULATED; }
 
-CaptureTool* OndulatedTool::copy(QObject* parent)
+CaptureTool* UndulatedTool::copy(QObject* parent)
 {
-    auto* tool = new OndulatedTool(parent);
+    auto* tool = new UndulatedTool(parent);
     copyParams(this, tool);
     tool->m_userWavelength = this->m_userWavelength;
     tool->m_wavelength = this->m_wavelength;
@@ -60,9 +60,9 @@ CaptureTool* OndulatedTool::copy(QObject* parent)
     return tool;
 }
 
-void OndulatedTool::pressed(CaptureContext& context) { Q_UNUSED(context) }
+void UndulatedTool::pressed(CaptureContext& context) { Q_UNUSED(context) }
 
-void OndulatedTool::drawStart(const CaptureContext& context)
+void UndulatedTool::drawStart(const CaptureContext& context)
 {
     onColorChanged(context.color);
     AbstractTwoPointTool::drawStart(context);
@@ -89,7 +89,7 @@ void OndulatedTool::drawStart(const CaptureContext& context)
     emit requestAction(CaptureTool::REQ_CLEAR_SELECTION);
 }
 
-void OndulatedTool::drawMove(const QPoint& p)
+void UndulatedTool::drawMove(const QPoint& p)
 {
     Qt::KeyboardModifiers mods = QGuiApplication::queryKeyboardModifiers();
     const bool shift = (mods & Qt::ShiftModifier);
@@ -127,7 +127,7 @@ void OndulatedTool::drawMove(const QPoint& p)
     emit requestAction(CaptureTool::REQ_CLEAR_SELECTION);
 }
 
-void OndulatedTool::drawEnd(const QPoint& p)
+void UndulatedTool::drawEnd(const QPoint& p)
 {
     Q_UNUSED(p)
     m_userWavelength = m_wavelength;
@@ -142,7 +142,7 @@ void OndulatedTool::drawEnd(const QPoint& p)
     emit requestAction(CaptureTool::REQ_CAPTURE_DONE_OK);
 }
 
-void OndulatedTool::process(QPainter& painter, const QPixmap& /*pixmap*/)
+void UndulatedTool::process(QPainter& painter, const QPixmap& /*pixmap*/)
 {
     const QPointF a = QPointF(points().first);
     const QPointF b = QPointF(points().second);
@@ -215,7 +215,7 @@ void OndulatedTool::process(QPainter& painter, const QPixmap& /*pixmap*/)
     painter.drawPath(path);
 }
 
-QVector<QPointF> OndulatedTool::generateOndulated(const QPointF& start, const QPointF& end, double wavelength, double amplitude)
+QVector<QPointF> UndulatedTool::generateUndulated(const QPointF& start, const QPointF& end, double wavelength, double amplitude)
 {
     QVector<QPointF> pts;
     QPointF dir = end - start;
@@ -235,7 +235,7 @@ QVector<QPointF> OndulatedTool::generateOndulated(const QPointF& start, const QP
     return pts;
 }
 
-QVector<QPointF> OndulatedTool::generateOndulatedBalanced(const QPointF& start, const QPointF& end, double wavelength, double amplitude)
+QVector<QPointF> UndulatedTool::generateUndulatedBalanced(const QPointF& start, const QPointF& end, double wavelength, double amplitude)
 {
     QVector<QPointF> pts;
     QPointF dir = end - start;
@@ -279,7 +279,7 @@ QVector<QPointF> OndulatedTool::generateOndulatedBalanced(const QPointF& start, 
     return pts;
 }
 
-QPainterPath OndulatedTool::pathFromPoints(const QVector<QPointF>& pts)
+QPainterPath UndulatedTool::pathFromPoints(const QVector<QPointF>& pts)
 {
     QPainterPath path;
     if (pts.isEmpty()) return path;

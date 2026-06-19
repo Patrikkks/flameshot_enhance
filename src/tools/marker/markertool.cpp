@@ -12,6 +12,7 @@ MarkerTool::MarkerTool(QObject* parent)
 {
     m_supportsOrthogonalAdj = true;
     m_supportsDiagonalAdj = true;
+    setModifierInvertsConstraint(true);
 }
 
 QIcon MarkerTool::icon(const QColor& background, bool inEditor) const

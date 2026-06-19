@@ -28,7 +28,7 @@
 #include "tools/text/texttool.h"
 #include "tools/undo/undotool.h"
 #include "tools/zigzag/zigzagtool.h"
-#include "tools/ondulated/ondulatedtool.h"
+#include "tools/undulated/undulatedtool.h"
 
 
 ToolFactory::ToolFactory(QObject* parent)
@@ -69,7 +69,7 @@ CaptureTool* ToolFactory::CreateTool(CaptureTool::Type t, QObject* parent)
         if_TYPE_return_TOOL(TYPE_SIZEDECREASE, SizeDecreaseTool);
         if_TYPE_return_TOOL(TYPE_INVERT, InvertTool);
         if_TYPE_return_TOOL(TYPE_ACCEPT, AcceptTool);
-        if_TYPE_return_TOOL(TYPE_ONDULATED, OndulatedTool);
+        if_TYPE_return_TOOL(TYPE_UNDULATED, UndulatedTool);
         if_TYPE_return_TOOL(TYPE_ZIGZAG, ZigZagTool);
         default:
             return nullptr;
