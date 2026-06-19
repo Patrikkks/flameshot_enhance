@@ -3,8 +3,8 @@
     <h1>
       <a href="https://github.com/Patrikkks/flameshot_enhance">
         <img src="data/img/app/org.flameshot.Flameshot.svg" alt="Flameshot" />
-      </a>
-      <br/>Flameshot Enhance
+      Flameshot Enhance</a>
+      <br/>
     </h1>
     <h4>Powerful yet simple to use screenshot software.</h4>
   </p>
