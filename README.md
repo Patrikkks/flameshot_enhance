@@ -44,7 +44,7 @@
 
 ## Enhancement Preview
 
-![image](https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/preview/animatedusage_Flameshot-Enhance.gif)
+![image](https://raw.githubusercontent.com/Patrikkks/flameshot_enhance/refs/heads/master/data/img/preview/animatedusage_Flameshot-Enhance_1080.gif)
 
 
 
