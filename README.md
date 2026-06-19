@@ -42,6 +42,11 @@
 </div>
 
 
+## Enhancement Preview
+
+![image](https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/preview/animatedusage_Flameshot-Enhance.gif)
+
+
 
 ## Preview
 
