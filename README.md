@@ -54,6 +54,7 @@
 
 ## Index
 
+- [The New Flameshot Enhance Features](#newfeatures)
 - [Features](#features)
 - [Usage](#usage)
   - [Usage on Windows](#usage-on-windows)
@@ -88,6 +89,26 @@
 - [Code Signing Policy](#code-signing-policy)
 - [Contribute](#contribute)
 - [Acknowledgment](#acknowledgment)
+
+
+
+## The New Flameshot Enhance Features
+
+Two New Tools & enhanced CTRL, ALT, and MOUSE behaviors have been added:
+
+1. The Undulated Tool draws a smooth, wavy/sinusoidal stroke between two points; useful for underlining typos or adding decorative borders.
+
+2. The Zigzag Tool draws a pointed, sawtooth pattern along the path between two points; useful for emphasis or stylized borders.
+
+3. The CTRL button is no longer needed for drawing orthogonally and at 45° angles with 
+- the Line Tool, 
+- the Undulated Tool, 
+- the Zigzag Tool and 
+- the Marker Tool. 
+They all draw automatically perfect horizontal / vertical / 45° lines.
+The logic behind this `ergonomic´ choice is that: the most common use of these tools is to underline text, and since sentences are most commonly written orthogonally, the tools for underlining should be set by default to be used in the most easy straightforward way (in this case: with only the mouse and no need to press any other button. If you need to draw with these tools at an arbitrary angle, you can do so by simply pressing the CTRL button.)
+
+4. While drawing with the Undulated or Zigzag tool you can now press the ALT button and move your mouse vertically and/or horizontally to adjust the amplitude and length of the wave/zigzag line.
 
 ## Features
 
